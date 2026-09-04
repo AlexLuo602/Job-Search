@@ -1,0 +1,24 @@
+views:
+  - type: table
+    name: All Attempts
+    filters:
+      and:
+        - file.folder == "Job Search/Neetcode/02. Attempts"
+    order:
+      - file.name
+      - lc_difficulty
+      - my_difficulty
+      - status
+      - time_min
+      - attempt_date
+      - topic
+      - tags
+    sort:
+      - property: attempt_date
+        direction: DESC
+      - property: time_min
+        direction: ASC
+      - property: tags
+        direction: DESC
+    columnSize:
+      note.time_min: 81
